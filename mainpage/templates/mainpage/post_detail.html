@@ -1,0 +1,191 @@
+{% extends "mainpage/templates/mainpage/header.html" %}
+{% load i18n %}
+
+{% block menu %}
+    {% include "mainpage/includes/menu.html" %}
+{% endblock %}
+
+{% block content %}
+{% with request.user as current_user %}
+
+
+{% if user.is_authenticated %}
+
+    {% if post.pk in favs %}
+
+                    <span>
+                        <div class="row">
+                            <div class="formcenter">
+
+                                        {% if error_message %}
+                                            <p>{{ error_message }}</p>
+                                        {% endif %}
+
+                                        {% if messages %}
+                                          <ul class="messages">
+                                            {% for message in messages %}
+                                              <li class="{{ message.tags }}">{{ message }}</li>
+                                            {% endfor %}
+                                          </ul>
+                                        {% endif %}
+
+                                    <form role="form"  id="favorite" action="" method="post" >
+                                        {% csrf_token %}
+                                        {% include 'mainpage/includes/form_template.html' %}
+                                            <div class="formcenter" style="text-align: center">
+                                                <br>
+                                                <button type="submit" id="fav_btn" class="btn btn-default"><span class="glyphicon glyphicon-star-empty"></span> {% trans 'Убрать из избранного' %}</button>
+                                            </div>
+                                    </form>
+                            </div>
+                        </div>
+                     </span>
+
+    {% else %}
+
+                        <span>
+                        <div class="row">
+                            <div class="formcenter">
+                                        {% if error_message %}
+                                            <p>{{ error_message }}</p>
+                                        {% endif %}
+
+                                        {% if messages %}
+                                          <ul class="messages">
+                                            {% for message in messages %}
+                                              <li class="{{ message.tags }}">{{ message }}</li>
+                                            {% endfor %}
+                                          </ul>
+                                        {% endif %}
+
+                                    <form role="form"  id="favorite" action="" method="post" >
+                                        {% csrf_token %}
+                                        {% include 'mainpage/includes/form_template.html' %}
+                                            <div class="formcenter" style="text-align: center">
+                                                <br>
+                                                <button type="submit" id="fav_btn" class="btn btn-default"><span class="glyphicon glyphicon-star"></span> {% trans 'Добавить в избранное' %}</button>
+                                            </div>
+                                    </form>
+                            </div>
+                        </div>
+                     </span>
+
+    {% endif %}
+
+{% else %}
+        <p class="centerr">{% trans 'Вы можете авторизоваться, чтобы иметь возможность сохранять посты в свой профиль!' %}</p>
+{% endif %}
+    <span class="centerr">
+             <p>
+                   <h2>
+                         <a class="anodec" style="font-size: x-large; color:rgb(100,100,100)" href="{{ post.url }}">
+                             {% autoescape off %}
+                                 {{ post.title }}
+                             {% endautoescape %}
+                         </a>
+                   </h2>
+            </p >
+            <p style="color: rgb(128,128,128)">
+                {{ post.create_date }}
+            </p>
+    </span>
+
+    {% autoescape off %}
+            {{ post.content }}
+    {% endautoescape %}
+
+
+    {% if current_user == post.user or request.user.is_staff %}
+
+        <p  style="text-align: center">
+                    <br>
+            {% trans 'У вас есть права на' %}
+            <a class="anodec" href="{% url 'mainpage:news_update' post.pk %}"> {% trans 'редактирование' %} </a>
+            {% trans 'и' %}
+            <a class="anodec" href="{% url 'mainpage:news_delete' post.pk %}"> {% trans 'удаление' %} </a>
+            {% trans 'этой новости.' %}
+        </p>
+    {% endif %}
+
+    {% if post.is_published == False %}
+        {% if user.is_staff %}
+                        <span>
+            <div class="row">
+                <div class="formcenter">
+
+                    {% if error_message %}
+                        <p>{{ error_message }}</p>
+                    {% endif %}
+
+                    {% if messages %}
+                      <ul class="messages">
+                        {% for message in messages %}
+                          <li class="{{ message.tags }}">{{ message }}</li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+
+                    <form role="form"  id="moderate" action="" method="post" >
+                        {% csrf_token %}
+                        {% include 'mainpage/includes/form_template.html' %}
+                            <div class="formcenter" style="text-align: center">
+                                <br>
+                                <button type="submit" id="mod_btn" class="btn btn-default"> {% trans 'Опубликовать' %}</button>
+
+                            </div>
+                        <br>
+                    </form>
+                </div>
+            </div>
+         </span>
+
+        {% endif %}
+    {% endif %}
+<script type="text/javascript">
+
+$(document).on('submit', '#favorite', function (e) {
+    e.preventDefault();
+    $.ajax({
+        type: 'POST',
+        url: 'user/favorited',
+        data: {
+            pk: {{ post.pk }},
+            csrfmiddlewaretoken: '{{ csrf_token }}'
+        },
+        success:function(info){
+            console.log(info)
+            console.log(typeof (info))
+
+            if (info["favorited"] === true){
+                $('#fav_btn').html('<span class="glyphicon glyphicon-star"></span> Favorited!')
+            } else {
+                $('#fav_btn').html('<span class="glyphicon glyphicon-star-empty"></span> Unfavorited!')
+            }
+        }
+    })
+});
+$(document).on('submit', '#moderate', function (e) {
+    e.preventDefault();
+    $.ajax({
+        type: 'POST',
+        url: 'user/moderated',
+        data: {
+            pk: {{ post.pk }},
+            csrfmiddlewaretoken: '{{ csrf_token }}'
+        },
+        success:function(info){
+            console.log(info)
+            console.log(typeof (info))
+
+            if (info["is_published"] === true){
+                $('#mod_btn').html("{% trans 'Пост опубликован!' %}")
+            } else {
+                $('#mod_btn').html("{% trans 'Публикация отменена!' %}")
+            }
+        }
+    })
+})
+</script>
+
+{% endwith %}
+{% endblock %}

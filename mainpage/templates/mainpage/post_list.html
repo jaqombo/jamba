@@ -1,0 +1,54 @@
+{% load i18n %}
+<br>
+{% for post in post_items %}
+        <ul>
+            <li>
+                <center>
+                    <p>
+                        <h2>
+                             <a class="anodec" style="font-size: x-large;color: rgb(100,100,100)" href="{{ post.url }}">
+                                 {% autoescape off %}
+                                     {{ post.title }}
+                                 {% endautoescape %}
+                             </a>
+                        </h2>
+                    </p>
+                </center>
+            </li>
+
+            <li>
+                <center>
+                    <p style="color: rgb(128,128,128)">
+                        {{ post.create_date }}
+                    </p>
+                </center>
+            </li>
+            <li>
+                <center>
+                  {% autoescape off  %}
+                      {% if post.pic != None %}
+                          {{ post.pic }}
+                      {% endif %}
+                  {% endautoescape %}
+                </center>
+            </li>
+            <li>
+            <center>
+                <p>
+                    {% autoescape off %}{{ post.preview  }}{% endautoescape %}
+                </p>
+            </center>
+            </li>
+
+
+            <li>
+                <center>
+                        {% block continue %}
+                            <a style="color:rgb(100,100,100); font-weight: bold;" href="{{ post.get_absolute_url }}post/{{ post.pk }}">{% trans 'Продолжение на этом сайте..' %}</a>
+                            <br><br><br><br><br><br><br>
+                        {% endblock %}
+                </center>
+            </li>
+
+        </ul>
+    {% endfor  %}

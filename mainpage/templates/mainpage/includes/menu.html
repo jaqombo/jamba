@@ -1,0 +1,181 @@
+{% load i18n %}
+{% block menu %}
+<!-- Menu -->
+        <div class="panel-group affix post__text_g table-responsive" style="width: 14%;" id="accordion">
+            <div class="panel panel-default">
+                    <div class="panel-heading" style="background-color: #43484c;">
+                            <h2 class="panel-title post__text_g centerr">
+                                <a class="anodec boldy colorM" data-toggle="collapse"
+                                   data-parent="#accordion" href="#collapseOne" >{% trans 'Хабрахабр' %}</a>
+                            </h2>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse">
+                        <div class="panel-body " style="background-color: #43484c; margin: auto; padding: auto">
+
+                            <table class="table" style="background-color: #43484c">
+                                <tr>
+                                    <td class="centerr">
+                                        <a class="anodec boldy colorL" href="{% url 'mainpage:habr_list' a.pk %}">{% trans 'Все потоки' %}</a>
+{#                                        All categories#}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="centerr">
+                                        <a class="anodec boldy colorL"  href="{% url 'mainpage:habr_list' a.pk|add:"1" %}">{% trans 'Разработка' %}</a>
+{#                                        Development#}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="centerr">
+                                        <a class="anodec boldy colorL"  href="{% url 'mainpage:habr_list' a.pk|add:"2" %}">{% trans 'Администрирование' %}</a>
+{#                                        Administation#}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="centerr">
+                                            <a class="anodec boldy colorL"  href="{% url 'mainpage:habr_list' a.pk|add:'3' %}">{% trans 'Дизайн' %}</a>
+{#                                        Design#}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="centerr">
+                                         <a class="anodec boldy colorL"  href="{% url 'mainpage:habr_list' a.pk|add:'4' %}">{% trans 'Управление' %}</a>
+{#                                        Management#}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="centerr">
+                                        <a class="anodec boldy colorL"  href="{% url 'mainpage:habr_list' a.pk|add:'5' %}">{% trans 'Маркетинг' %}</a>
+{#                                        Marketing#}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="centerr">
+                                        <a class="anodec boldy colorL"  href="{% url 'mainpage:habr_list' a.pk|add:'6' %}">{% trans 'Разное' %}</a>
+{#                                      Other  <span class="badge">42</span>#}
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default ">
+                    <div class="panel-heading" style="background-color: #43484c">
+                        <h2 class="panel-title post__text_g anodec centerr">
+                            <a class="anodec boldy colorM" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">{% trans 'Тут.бай' %}</a>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                        <div class="panel-body " style="background-color: #43484c ">
+                            <table class="table" style="align-content: center">
+                                <tr>
+                                    <td class="centerr">
+                                        <a class="anodec boldy colorL"  href="{% url 'mainpage:tut_list' a.pk|add:'7' %}">{% trans 'Главное' %}</a>
+{#                                        Daynews#}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="centerr">
+                                        <a class="anodec boldy colorL"  href="{% url 'mainpage:tut_list' a.pk|add:'8' %}">{% trans 'Минск' %}</a>
+{#                                        Minsk#}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="centerr">
+                                        <a class="anodec boldy colorL"  href="{% url 'mainpage:tut_list' a.pk|add:'9' %}">{% trans 'Эксклюзив' %}</a>
+{#                                        Exclusive#}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="centerr">
+                                        <a class="anodec boldy colorL"  href="{% url 'mainpage:tut_list' a.pk|add:'10' %}">{% trans 'Деньги и власть' %}</a>
+{#                                        Economics#}
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <td class="centerr">
+                                        <a class="anodec boldy colorL"  href="{% url 'mainpage:tut_list' a.pk|add:'11' %}">{% trans 'Общество' %}</a>
+{#                                        Society#}
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <td class="centerr">
+                                        <a class="anodec boldy colorL"  href="{% url 'mainpage:tut_list' a.pk|add:'12' %}">{% trans 'В мире' %}</a>
+{#                                        World#}
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <td class="centerr">
+                                        <a class="anodec boldy colorL"  href="{% url 'mainpage:tut_list' a.pk|add:'13' %}">{% trans 'Кругозор' %}</a>  
+{#                                        Culture#}
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading " style="background-color: #43484c;">
+                        <h2 class="panel-title post__text_g anodec centerr">
+                            <a class="anodec boldy colorM centerr" data-toggle="collapse" data-parent="#accordion"  href="#collapseThree">{% trans 'Аккаунт' %}</a>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse">
+                        <div class="panel-body" style="background-color: #43484c;">
+                            <table class="table">
+                                {% if request.user.is_authenticated %}
+                                    <tr>
+                                        <td class="centerr">
+                                           <a href="{% url 'mainpage:profile' %}" class="text-danger anodec boldy colorL"  >{% trans 'Профиль' %}</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="centerr">
+                                            <a class="anodec boldy colorL"  href="{% url 'mainpage:custom_posts' %}"> {% trans 'Наши новости' %} </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="centerr">
+                                            <a class="anodec boldy colorL"  href="{% url 'mainpage:news_create' %}"> {% trans 'Создать новость' %} </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="centerr">
+                                            <a href="{% url 'mainpage:change_password' %}" class="text-danger anodec boldy colorL"  >{% trans 'Сменить пароль' %}</a>
+                                        </td>
+                                    </tr>
+                                    {% if request.user.is_staff %}
+
+                                     <tr>
+                                        <td class="centerr">
+                                            <a class="anodec boldy colorL"  href="{% url 'mainpage:posts_on_moderation' %}"> {% trans 'Модерация' %} </a>
+                                        </td>
+                                    </tr>
+                                    {% endif %}
+                                    <tr>
+                                        <td class="centerr">
+                                            <a href="{% url 'mainpage:logout' %}" class="text-danger anodec boldy colorL"  >{% trans 'Выйти' %}</a>
+                                        </td>
+                                    </tr>
+                                {% else %}
+                                    <tr>
+                                        <td class="centerr">
+                                            <a class="anodec boldy colorL"  href="{% url 'mainpage:login' %}">{% trans 'Авторизоваться' %}</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="centerr">
+                                            <a class="anodec boldy colorL"  href="{% url 'mainpage:register' %}">{% trans 'Зарегистрироваться' %}</a>
+    {#                                        <span class="badge">5</span>#}
+                                        </td>
+                                    </tr>
+                                {% endif %}
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+{% endblock %}

@@ -1,0 +1,133 @@
+hr{
+border: none;
+color: rgb(128,128,128); 
+background-color: rgb(148,148,148); 
+height: 0.7px; 
+}
+A{
+color:rgb(128,128,128);
+}
+A:visited{
+color:rgb(128,128,128);
+}
+A:active{
+color:rgb(128,128,128);
+}
+h2 {
+display: block;
+font-size: 1.5em;
+-webkit-margin-before: 0.83em;
+-webkit-margin-after: 0.83em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+font-weight: bold;
+}
+.layout {
+position: relative;
+display: table;
+min-width: 1024px;
+width: 100%;
+height: 100%;
+border-spacing: 0;
+border-collapse: collapse;
+background: #fff;
+}
+.post__text-html img {
+margin: 0;
+vertical-align: middle;
+}
+img {
+max-width: 100%;
+border-style: none;
+}
+*, :before, :after {
+box-sizing: inherit;
+}
+div{
+text-align: center;
+display: block;
+}
+.post__text {
+overflow: hidden;
+font-size: 16px;
+line-height: 1.56;
+}
+.post__text_g{
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+color: rgb(120,120,120);
+font-weight: 100;
+font-size: 20px;
+line-height: 36.4px;
+}
+.post__text-html {
+margin-right: -5px;
+padding-right: 5px;
+color: #222;
+}
+.post__text {
+overflow: hidden;
+font-size: 16px;
+line-height: 1.56;}
+li {
+display: list-item;
+text-align: -webkit-match-parent;
+list-style-type: none; /* ������� ������� */
+}
+.post__text-html blockquote {
+display: block;
+margin: 12px 0;
+padding: 18px 20px;
+background: #fff7d7;
+}
+blockquote {
+display: block;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 40px;
+-webkit-margin-end: 40px;
+}
+.post__title_link {
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+color: #444;
+font-weight: 500;
+font-size: 28px;
+line-height: 36.4px;
+}
+.b-top-profile__subitem>.b-top-profile__link {
+white-space: nowrap;
+text-overflow: ellipsis;
+overflow: hidden;
+padding-top: 5px;
+padding-bottom: 5px;
+display: block;
+}
+#myBtn {
+display: none;
+position: fixed;
+bottom: 80px;
+left: 460px;
+z-index: 99;
+border: none;
+outline: none;
+background-color: rgb(188,188,188);
+color: rgb(150,150,150);
+cursor: pointer;
+padding: 15px;
+border-radius: 10px;
+}
+.afffix {
+top: 0;
+width: 100%;
+z-index: 9999 !important;
+}
+.anodec{
+text-decoration: none !important;
+}
+#myBtn:hover {
+background-color: #555;
+}
+.btntt {
+border-radius: 4px !important;
+}

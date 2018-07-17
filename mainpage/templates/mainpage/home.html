@@ -1,0 +1,15 @@
+{% extends "mainpage/templates/mainpage/header.html" %}
+{% load i18n %}
+
+    {% block title %}
+        {{ block.super }}{% trans 'Jamba' %}
+    {% endblock %}
+    {% block menu %}
+        {% include "mainpage/includes/menu.html" %}
+    {% endblock %}
+
+    {% block content %}
+        {% include "mainpage/includes/htmlsnippet.html" %}
+        {% include "mainpage/post_list.html" %}
+        {% include "mainpage/includes/add_posts.html" %}
+    {% endblock %}

@@ -1,0 +1,478 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-23 14:27+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\mainpage\forms.py:13 .\mainpage\forms.py:39
+msgid "Имя пользователя"
+msgstr "Username"
+
+#: .\mainpage\forms.py:18 .\mainpage\forms.py:48
+#: .\mainpage\templates\mainpage\change-password.html:5
+#: .\mainpage\templates\mainpage\password_change_done.html:5
+#: .\mainpage\templates\mainpage\registration\password_reset_confirm.html:5
+#: .\mainpage\templates\mainpage\registration\password_reset_done.html:5
+#: .\mainpage\templates\mainpage\registration\password_reset_form.html:5
+msgid "Пароль"
+msgstr "Password"
+
+#: .\mainpage\forms.py:33
+msgid "Неправильный логин или пароль"
+msgstr "Wrong login or password"
+
+#: .\mainpage\forms.py:43
+msgid "Почтовый адрес"
+msgstr "Email"
+
+#: .\mainpage\forms.py:53
+msgid "Подтвердите пароль"
+msgstr "Confirm your password"
+
+#: .\mainpage\forms.py:61
+msgid "Пользователь с таким именем уже существует."
+msgstr "A user with this name already exists."
+
+#: .\mainpage\forms.py:74
+msgid "Пользователь с таким эмэйлом уже существует"
+msgstr "A user with this email already exists."
+
+#: .\mainpage\forms.py:94
+msgid "Пароли не совпадают"
+msgstr "Passwords don't match"
+
+#: .\mainpage\forms.py:142
+msgid "Имя "
+msgstr "First name"
+
+#: .\mainpage\forms.py:146
+msgid "Фамилия"
+msgstr "Last name"
+
+#: .\mainpage\models.py:64
+msgid "Название"
+msgstr "Title"
+
+#: .\mainpage\models.py:66
+msgid "Предпросмотр"
+msgstr "Preview"
+
+#: .\mainpage\models.py:68
+msgid "Контент"
+msgstr "Content"
+
+#: .\mainpage\models.py:88
+msgid "Дата окончания действия ссылки активации"
+msgstr "Expiration date of the activation link "
+
+#: .\mainpage\models.py:91
+msgid "Ссылка"
+msgstr "Link"
+
+#: .\mainpage\models.py:106
+msgid "Активация"
+msgstr "Activation"
+
+#: .\mainpage\models.py:115
+msgid "Аватар"
+msgstr "Avatar"
+
+#: .\mainpage\templates\mainpage\change-password.html:14
+#: .\mainpage\templates\mainpage\password_change_done.html:14
+#: .\mainpage\templates\mainpage\registration\password_reset_confirm.html:15
+msgid "Смена пароля"
+msgstr "Change password"
+
+#: .\mainpage\templates\mainpage\change-password.html:38
+#: .\mainpage\templates\mainpage\news_create.html:30
+#: .\mainpage\templates\mainpage\registration_form.html:40
+msgid "Ввод"
+msgstr "Enter"
+
+#: .\mainpage\templates\mainpage\favourites.html:6
+msgid "Favourites"
+msgstr "Избранное"
+
+#: .\mainpage\templates\mainpage\favourites.html:59
+#: .\mainpage\templates\mainpage\post_list.html:47
+msgid "Продолжение на этом сайте.."
+msgstr "More on this website.."
+
+#: .\mainpage\templates\mainpage\favourites.html:71
+msgid "У вас пока что нету избранных постов."
+msgstr "You don't have any favourite posts yet."
+
+#: .\mainpage\templates\mainpage\footer+lang_switch.html:9
+msgid "Связаться"
+msgstr "Contact"
+
+#: .\mainpage\templates\mainpage\footer+lang_switch.html:20
+msgid "Сменить язык"
+msgstr "Change language"
+
+#: .\mainpage\templates\mainpage\home.html:5
+msgid "Jamba"
+msgstr "Jamba"
+
+#: .\mainpage\templates\mainpage\includes\add_posts.html:12
+msgid "Добавить посты"
+msgstr "Add posts"
+
+#: .\mainpage\templates\mainpage\includes\menu.html:9
+msgid "Хабрахабр"
+msgstr "Habrahabr"
+
+#: .\mainpage\templates\mainpage\includes\menu.html:18
+msgid "Все потоки"
+msgstr "All categories"
+
+#: .\mainpage\templates\mainpage\includes\menu.html:24
+msgid "Разработка"
+msgstr "Development"
+
+#: .\mainpage\templates\mainpage\includes\menu.html:30
+msgid "Администрирование"
+msgstr "Administation"
+
+#: .\mainpage\templates\mainpage\includes\menu.html:36
+msgid "Дизайн"
+msgstr "Design"
+
+#: .\mainpage\templates\mainpage\includes\menu.html:42
+msgid "Управление"
+msgstr "Management"
+
+#: .\mainpage\templates\mainpage\includes\menu.html:48
+msgid "Маркетинг"
+msgstr "Marketing"
+
+#: .\mainpage\templates\mainpage\includes\menu.html:54
+msgid "Разное"
+msgstr "Other"
+
+#: .\mainpage\templates\mainpage\includes\menu.html:65
+msgid "Тут.бай"
+msgstr "TUT.BY"
+
+#: .\mainpage\templates\mainpage\includes\menu.html:73
+msgid "Главное"
+msgstr "Daynews"
+
+#: .\mainpage\templates\mainpage\includes\menu.html:79
+msgid "Минск"
+msgstr "Minsk"
+
+#: .\mainpage\templates\mainpage\includes\menu.html:85
+msgid "Эксклюзив"
+msgstr "Exclusive"
+
+#: .\mainpage\templates\mainpage\includes\menu.html:91
+msgid "Деньги и власть"
+msgstr "Economics"
+
+#: .\mainpage\templates\mainpage\includes\menu.html:97
+msgid "Общество"
+msgstr "Society"
+
+#: .\mainpage\templates\mainpage\includes\menu.html:103
+msgid "В мире"
+msgstr "World"
+
+#: .\mainpage\templates\mainpage\includes\menu.html:109
+msgid "Кругозор"
+msgstr "Culture"
+
+#: .\mainpage\templates\mainpage\includes\menu.html:120
+msgid "Аккаунт"
+msgstr "Account"
+
+#: .\mainpage\templates\mainpage\includes\menu.html:129
+msgid "Профиль"
+msgstr "Profile"
+
+#: .\mainpage\templates\mainpage\includes\menu.html:134
+#: .\mainpage\templates\mainpage\our_news.html:5
+#: .\mainpage\templates\mainpage\posts_on_moderation.html:5
+#| msgid "Создание новости"
+msgid "Наши новости"
+msgstr "Jamba news"
+
+#: .\mainpage\templates\mainpage\includes\menu.html:139
+msgid "Создать новость"
+msgstr "Create post"
+
+#: .\mainpage\templates\mainpage\includes\menu.html:144
+#: .\mainpage\templates\mainpage\registration\password_reset_confirm.html:39
+msgid "Сменить пароль"
+msgstr "Change password"
+
+#: .\mainpage\templates\mainpage\includes\menu.html:151
+#| msgid "Регистрация"
+msgid "Модерация"
+msgstr "Modetation"
+
+#: .\mainpage\templates\mainpage\includes\menu.html:157
+msgid "Выйти"
+msgstr "Logout"
+
+#: .\mainpage\templates\mainpage\includes\menu.html:163
+msgid "Авторизоваться"
+msgstr "Authorize"
+
+#: .\mainpage\templates\mainpage\includes\menu.html:168
+msgid "Зарегистрироваться"
+msgstr "Registrate"
+
+#: .\mainpage\templates\mainpage\login_form.html:10
+#: .\mainpage\templates\mainpage\login_form.html:15
+msgid "Авторизация"
+msgstr "Authorization"
+
+#: .\mainpage\templates\mainpage\login_form.html:37
+msgid "Забыли пароль?"
+msgstr "Forgot password?"
+
+#: .\mainpage\templates\mainpage\login_form.html:42
+msgid "Зайти"
+msgstr "Sign-in"
+
+#: .\mainpage\templates\mainpage\news_create.html:10
+msgid "Создание новости"
+msgstr "Create post"
+
+#: .\mainpage\templates\mainpage\news_create.html:15
+msgid "Создайте свой пост"
+msgstr "Create your post"
+
+#: .\mainpage\templates\mainpage\news_update.html:9
+msgid "Редактирование новости"
+msgstr "Edit post"
+
+#: .\mainpage\templates\mainpage\news_update.html:16
+msgid "Обновите свой пост"
+msgstr "Update your post"
+
+#: .\mainpage\templates\mainpage\news_update.html:33
+#: .\mainpage\templates\mainpage\profile_update.html:32
+msgid "Сохранить"
+msgstr "Save"
+
+#: .\mainpage\templates\mainpage\our_news.html:73
+#: .\mainpage\templates\mainpage\posts_on_moderation.html:59
+msgid "Увидеть пост целиком.."
+msgstr "View details.."
+
+#: .\mainpage\templates\mainpage\our_news.html:85
+#: .\mainpage\templates\mainpage\posts_on_moderation.html:71
+msgid "Новостей пока что нету, ожидайте их вскоре!"
+msgstr "No news so far, expect them soon!"
+
+#: .\mainpage\templates\mainpage\password_change_done.html:37
+msgid "Ваш пароль успешно восстановлен. Теперь вы можете "
+msgstr "Your password has been set. You may go ahead and "
+
+#: .\mainpage\templates\mainpage\password_change_done.html:37
+msgid "войти"
+msgstr "sign in"
+
+#: .\mainpage\templates\mainpage\password_change_done.html:37
+msgid " в свой аккаунт."
+msgstr " now."
+
+#: .\mainpage\templates\mainpage\post_confirm_delete.html:4
+msgid "Вы уверены, что хотите удалить "
+msgstr "Are you sure you want to delete"
+
+#: .\mainpage\templates\mainpage\post_confirm_delete.html:5
+msgid "Удалить"
+msgstr "Delete"
+
+#: .\mainpage\templates\mainpage\post_confirm_delete.html:6
+msgid "Отмена"
+msgstr "Cancel"
+
+#: .\mainpage\templates\mainpage\post_detail.html:37
+#| msgid "Добавить в избранное"
+msgid "Убрать из избранного"
+msgstr "Remove from favourites"
+
+#: .\mainpage\templates\mainpage\post_detail.html:66
+msgid "Добавить в избранное"
+msgstr "Add to favourites"
+
+#: .\mainpage\templates\mainpage\post_detail.html:76
+msgid ""
+"Вы можете авторизоваться, чтобы иметь возможность сохранять посты в свой "
+"профиль!"
+msgstr "You can login to be able to save posts to your profile!"
+
+#: .\mainpage\templates\mainpage\post_detail.html:102
+msgid "У вас есть права на"
+msgstr "You have rights to"
+
+#: .\mainpage\templates\mainpage\post_detail.html:103
+#| msgid "редактировать"
+msgid "редактирование"
+msgstr "edit"
+
+#: .\mainpage\templates\mainpage\post_detail.html:104
+msgid "и"
+msgstr "and"
+
+#: .\mainpage\templates\mainpage\post_detail.html:105
+#| msgid "Управление"
+msgid "удаление"
+msgstr "delete"
+
+#: .\mainpage\templates\mainpage\post_detail.html:106
+#| msgid "эту новость."
+msgid "этой новости."
+msgstr "this post."
+
+#: .\mainpage\templates\mainpage\post_detail.html:133
+#| msgid "Авторизоваться"
+msgid "Опубликовать"
+msgstr "Publish"
+
+#: .\mainpage\templates\mainpage\post_detail.html:181
+msgid "Пост опубликован!"
+msgstr "Post is published!"
+
+#: .\mainpage\templates\mainpage\post_detail.html:183
+msgid "Публикация отменена!"
+msgstr "Publication has been canceled!"
+
+#: .\mainpage\templates\mainpage\posts_on_moderation.html:78
+msgid "У вас недостаточно прав для просмотра этой страницы."
+msgstr "You do not have sufficient rights to view this page."
+
+#: .\mainpage\templates\mainpage\profile.html:20
+msgid "Это ваш замечательный профиль"
+msgstr "This is your wonderful profile"
+
+#: .\mainpage\templates\mainpage\profile.html:33
+msgid "Ваш логин: "
+msgstr "Your login: "
+
+#: .\mainpage\templates\mainpage\profile.html:34
+msgid "Ваш почтовый адрес: "
+msgstr "Your email address: "
+
+#: .\mainpage\templates\mainpage\profile.html:36
+msgid "Ваше имя: "
+msgstr "Your first name: "
+
+#: .\mainpage\templates\mainpage\profile.html:39
+msgid "Ваша фамилия: "
+msgstr "Your last name: "
+
+#: .\mainpage\templates\mainpage\profile.html:41
+msgid "Вы присоединились к Jamba "
+msgstr "You have joined Jamba "
+
+#: .\mainpage\templates\mainpage\profile.html:45
+msgid "Вы можете добавлять посты в"
+msgstr "You can add posts to the "
+
+#: .\mainpage\templates\mainpage\profile.html:45
+#: .\mainpage\templates\mainpage\profile.html:58
+msgid "Избранное"
+msgstr "Favourite"
+
+#: .\mainpage\templates\mainpage\profile.html:45
+msgid "и заходить в этот раздел через свой профиль."
+msgstr "section and access it any time right from your profile."
+
+#: .\mainpage\templates\mainpage\profile.html:46
+msgid ""
+"Также вы добавить дополнительную информацию в ваш профиль и изменить аватар "
+"здесь "
+msgstr ""
+"Also you can add more information too your profile and change your avatar "
+"here "
+
+#: .\mainpage\templates\mainpage\profile.html:53
+msgid "Мои категории"
+msgstr "My categories"
+
+#: .\mainpage\templates\mainpage\profile.html:56
+msgid "Мои сайты"
+msgstr "My sites"
+
+#: .\mainpage\templates\mainpage\profile_update.html:16
+msgid "Дополнение профиля"
+msgstr "Improve your profile"
+
+#: .\mainpage\templates\mainpage\registration\password_reset_complete.html:10
+#: .\mainpage\templates\mainpage\registration\password_reset_form.html:13
+msgid "Восстановление пароля"
+msgstr "Password recovery"
+
+#: .\mainpage\templates\mainpage\registration\password_reset_form.html:37
+msgid "Отправить код"
+msgstr "Send code"
+
+#: .\mainpage\templates\mainpage\registration_form.html:10
+msgid "Регистрация"
+msgstr "Registration"
+
+#: .\mainpage\templates\mainpage\registration_form.html:15
+msgid "Создайте новый аккаунт"
+msgstr "Create new account"
+
+#: .\mainpage\views.py:161
+msgid "Пост успешно создан и отправлен на модерацию."
+msgstr "The post was successfully created and sent for moderation."
+
+#: .\mainpage\views.py:167
+msgid "Пост не был создан. Попробуйте снова."
+msgstr "Post was not created. Try it again."
+
+#: .\mainpage\views.py:264
+msgid "Не удалось создать учётную запись. Обратитесь к администратору."
+msgstr "Couldn't create account. Contact admin."
+
+#: .\mainpage\views.py:270
+msgid "Учётная запись создана. Уведомление для активации в ящике."
+msgstr "Account almost created. Activate account by using link in your email"
+
+#: .\mainpage\views.py:274
+msgid "Подтверждение почты"
+msgstr "Email confirmation"
+
+#: .\mainpage\views.py:275
+msgid ", вот ваша cсылка для активации:"
+msgstr ", here is your activation link:"
+
+#: .\mainpage\views.py:307
+msgid "Не удалось активировать учётную запись."
+msgstr "Couldn't activate your account. Try again."
+
+#~ msgid "В избранном!"
+#~ msgstr "Favourite"
+
+#~ msgid "Вы являетесь создателем этого поста, поэтому вы можете"
+#~ msgstr "You are the creator of this post, so you can"
+
+#~ msgid "или"
+#~ msgstr "or"
+
+#~ msgid "удалить"
+#~ msgstr "delete"
+
+#~ msgid "Заголовок"
+#~ msgstr "Title"

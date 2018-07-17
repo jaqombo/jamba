@@ -1,0 +1,47 @@
+{% extends "mainpage/templates/mainpage/header.html" %}
+{% load i18n %}
+
+    {% block menu %}
+        {% include "mainpage/includes/menu.html" %}
+    {% endblock %}
+
+    {% block content %}
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+        <h2 class="page-header colorM" style="text-align: center"> {% trans 'Дополнение профиля' %}</h2>
+        <br>
+       <div class="container-fluid ">
+            <div class="row">
+                <div class="col-sm-8 col-md-push-2">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            {% if error_message %}
+                                <p>{{ error_message }}</p>
+                            {% endif %}
+                            <form class="form-horizontal" name="form" action="" method="post" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                {% include 'mainpage/includes/form_template.html' %}
+                                <div class="form-group" >
+                                    <div class="col-sm-10" style="text-align: center">
+{#                                        <input type="file" name="avatar">#}
+                                        <button type="submit" class="btn btn-success">{% trans 'Сохранить' %}</button>
+                                    </div>
+                                </div>
+                            </form>
+                          {% if uploaded_file_url %}
+                            <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+                          {% endif %}
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    {% endblock %}

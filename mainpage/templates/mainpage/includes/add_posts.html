@@ -1,0 +1,27 @@
+{% load i18n %}
+{% block content %}
+        {% for category in category_items %}
+
+            <p>
+                <h2  style="text-align: center">
+                    <a id="test" class="anodec colorM" style="font-size: 20px;" href="{% url 'mainpage:habr_list' category.pk %}add_posts">Запарсить еще десяток постов для категории "{{ category.headline }}"</a>
+                </h2>
+            </p>
+            <br>
+                    <div class="col-sm-12" style="text-align: center">
+                        <button  type="submit" class="btn btn-success" name="updbtn" style="background-color: #f99e1a; border-color: rgb(120,120,120)">{% trans 'Добавить посты' %}</button>
+                    </div>
+            <br>
+{#    <script type="text/javascript" src="{{STATIC_URL}}js/jquery-3.3.1.min.js"></script>#}
+{#    <script type="text/javascript">#}
+{#       $(function() {#}
+{#          $("#test").click(function() {#}
+{#             $.get("/add_data/", function(data) {#}
+{#                alert(data);#}
+{#             });#}
+{#          });#}
+{#        });#}
+{#    </script>#}
+        {% endfor %}
+    <br>
+{% endblock %}

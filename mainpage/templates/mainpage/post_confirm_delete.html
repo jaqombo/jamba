@@ -1,0 +1,8 @@
+{% load i18n %}
+<form action="" method="post">
+    {% csrf_token %}
+    <p>{% trans 'Вы уверены, что хотите удалить ' %} "{{ object }}"?</p>
+    <input type="submit" value="{% trans 'Удалить' %}" />
+    <a href="{% url 'mainpage:custom_posts' %}">{% trans 'Отмена' %}</a>
+
+</form>

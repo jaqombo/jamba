@@ -1,0 +1,55 @@
+{% extends "mainpage/templates/mainpage/header.html" %}
+{% load i18n %}
+
+{% block menu %}
+    {% include "mainpage/includes/menu.html" %}
+{% endblock %}
+
+
+{% block title %}
+    {{ block.super }}{% trans 'Авторизация' %}
+{% endblock %}
+
+{% block content %}
+
+<h1 style="text-align: center; color: rgb(100,100,100); font-weight: bold;">{% trans 'Авторизация' %}</h1>
+
+<div class="container-fluid ">
+    <div class="row">
+        <div class="col-sm-8 col-md-push-2">
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+                    {% if error_message %}
+                        <p>{{ error_message }}</p>
+                    {% endif %}
+                    {% if messages %}
+                      <ul class="messages">
+                        {% for message in messages %}
+                          <li class="{{ message.tags }}">{{ message }}</li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+
+                    <form class="form-horizontal" role="form" action="" enctype="multipart/form-data" method="post" >
+                        {% csrf_token %}
+                        {% include 'mainpage/includes/form_template.html' %}
+                        <div class="col-sm-10" style="text-align: center"> <a style="font-size: 90%; color: darkgrey;" href="{% url 'mainpage:password_reset' %}">{% trans 'Забыли пароль?' %} </a></div>
+
+                        <div class="form-group" >
+                            <div class="col-sm-10" style="text-align: center">
+                                <br>
+                                <button type="submit" class="btn btn-success btnform">{% trans 'Зайти' %}</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,20 @@
+{% load i18n %}
+<footer style="position: absolute;width: 100%; background-color: #43484c; height: 47px; box-sizing: border-box; border-bottom: 1px solid background-color:rgb(150,150,150); ">
+    <div class="container-fluid boldy centerr" style="margin-top: 10px; margin-left: 20%">
+        <form  action="{% url 'set_language' %}" method="post">
+            {% csrf_token %}
+          <a href="#" target="blank">{% trans 'Связаться' %}</a> | <a href="#" target="blank">LinkedIn</a> | <a href="#" target="blank">Twitter</a> | <a href="#" target="blank">Google+</a> |  <input style="background-color: red !important; " name="next" type="hidden" value="{{ redirect_to }}" />
+            <select style="border: none; background-color: #444444" name="language">
+                {% get_current_language as LANGUAGE_CODE %}
+                {% get_available_languages as LANGUAGES %}
+                {% get_language_info_list for LANGUAGES as languages %}
+                {% for language in languages %}
+                    <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                        {{ language.name_local }}
+                    </option>
+                {% endfor %}
+            </select>
+            <input style="background-color: #444444; border: none" type="submit" value="{% trans 'Сменить язык' %}" />
+        </form>
+    </div>
+</footer>

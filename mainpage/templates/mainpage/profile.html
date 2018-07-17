@@ -1,0 +1,64 @@
+{% extends "mainpage/templates/mainpage/header.html" %}
+{% load i18n %}
+{% load staticfiles%}
+
+    {% block menu %}
+        {% include "mainpage/includes/menu.html" %}
+    {% endblock %}
+
+    {% block content %}
+    {% if messages %}
+        <ul class="centerr" style="padding: 0">
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{#        {% include "mainpage/includes/htmlsnippet.html" %}#}
+{#        {% include "mainpage/post_list.html" %}#}
+{#        {% include "mainpage/includes/add_posts.html" %}#}
+        <h2 class="page-header colorM" style="text-align: center"> {% trans 'Это ваш замечательный профиль' %}</h2>
+
+        <div class="container-fluid ">
+            <div class="row">
+                <div class="col-sm-8 col-md-push-2">
+                     <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="" style="text-align: justify">
+                                      {% if user.profile.avatar %}
+                                          <p> <span class="profile_text colorM"> <img  src="{{ user.profile.avatar.url }}" alt="avatar-img" width="240"/></span> </p>
+                                      {% else %}
+                                           <p> <span class="profile_text colorM"> <img  src="{% static 'img/197297.jpg' %}" width="240"/></span> </p>
+                                      {% endif %}
+                                    <p> {% trans 'Ваш логин: ' %} <span class="profile_text colorM"> {{ user.username }}</span> </p>
+                                    <p> {% trans 'Ваш почтовый адрес: ' %} <span class="profile_text colorM">{{ user.email }}</span></p>
+                                      {% if user.first_name != '' %}
+                                          <p> {% trans 'Ваше имя: ' %} <span class="profile_text colorM"> {{ user.first_name }}</span> </p>
+                                      {% endif %}
+                                      {% if user.last_name != '' %}
+                                          <p> {% trans 'Ваша фамилия: ' %} <span class="profile_text colorM"> {{ user.last_name }}</span> </p>
+                                      {% endif %}
+                                    <p> {% trans 'Вы присоединились к Jamba ' %}{{ user.date_joined }} </p>
+                                </div>
+                            </div>
+                            <div class="panel-footer">
+                                <p>{% trans 'Вы можете добавлять посты в' %} <a href="{% url 'mainpage:favourites' %}">{% trans 'Избранное' %}</a> {% trans 'и заходить в этот раздел через свой профиль.' %} </p>
+                                <p>{% trans 'Также вы добавить дополнительную информацию в ваш профиль и изменить аватар здесь ' %}<a href="{% url 'mainpage:update_profile' %}"><span class="glyphicon glyphicon-cog"></span></a></p>
+                            </div>
+                     </div>
+                </div>
+
+            </div>
+                        <div class=" add-row">
+             <button type="submit" class="btn btn-warning btnform" style="border-color: orange; margin: 0 0 0 24%">{% trans 'Мои категории' %}</button>
+
+
+             <button type="submit" class="btn btn-warning btnform" style="border-color: orange; margin: 0 0 0 5%">{% trans 'Мои сайты' %}</button>
+
+            <a class="button_href btn btn-warning btnform" style="color:white;border:none !important; margin: 0 0 0 5%" href="{% url 'mainpage:favourites' %}">{% trans 'Избранное' %}</a>
+
+{#             <button type="submit" class="btn btn-warning btnform" style="border-color: orange; margin: 0 0 0 5%">{% trans 'Избранное' %}</button>#}
+                </div>
+                <br>
+        </div>
+    {% endblock %}
