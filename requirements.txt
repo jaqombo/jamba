@@ -13,7 +13,7 @@ chardet==3.0.4
 codegen==1.0
 colorama==0.3.7
 constantly==15.1.0
-cryptography==2.1.4
+cryptography==3.2
 cssselect==1.0.3
 dj-database-url==0.4.2
 Django==2.0.1
